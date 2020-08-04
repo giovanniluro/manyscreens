@@ -63,9 +63,8 @@ export const Content = styled.div`
   }
 
   @media(min-width: 950px) {
-    width: 850px;
-    height: 425px;
-
+    width: 56vw;
+    height: 28vw;
   }
 `
 
