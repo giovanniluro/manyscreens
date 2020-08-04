@@ -11,6 +11,7 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
     transition: .5s ease;
+    transform: translateZ(0);
   }
 
   html, body, #root {
@@ -27,10 +28,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 `
 
 export const Content = styled.div`
+  margin-top: 40px;
+  border: 6px solid #1d3557;
   height: 40vw;
   width: 80vw;
   position: relative;
@@ -455,20 +457,146 @@ export const Size = styled.div<MonitorProps>`
 
 `
 
-export const Buttons = styled.div`
+export const Buttons = styled.div<MonitorProps>`
   display:flex;
   justify-content: space-around;
   margin-top: 40px;
   width: 90vw;
+  position: relative;
 
-  button {
-    border: 0;
-    padding: 1px;
-    padding: 10px 20px;
-    background: white;
-    border-radius: 8px;
-    color: black;
-    outline: 0;
+  > label {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     cursor: pointer;
+    z-index: 2;
+
+    button {
+      border: 0;
+      color: white;
+      background: #e63946;
+      border-radius: 4px;
+      padding: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      outline: 0;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    > div {
+      height: 15px;
+      width: 15px;
+      background: #fbfbfb;
+      border-radius: 50%;
+    }
+  }
+
+  ${props => props.monitor === '800x600' && css`
+    .btn-1 {
+      > div {
+        background: #80b918;
+      }
+    }  
+  `}
+
+  ${props => props.monitor === '1024x768' && css`
+    .btn-1 {
+      > div {
+        background: #55a630;
+      }
+    }  
+    .btn-2 {
+      > div {
+        background: #55a630;
+      }
+    }  
+  `}
+
+  ${props => props.monitor === '1280x1024' && css`
+    .btn-1 {
+      > div {
+        background: #2b9348;
+      }
+    }  
+    .btn-2 {
+      > div {
+        background: #2b9348;
+      }
+    }
+    .btn-3 {
+      > div {
+        background: #2b9348;
+      }
+    }  
+  `}
+
+  ${props => props.monitor === '1980x1080' && css`
+    .btn-1 {
+      > div {
+        background: #007f5f;
+      }
+    }  
+    .btn-2 {
+      > div {
+        background: #007f5f;
+      }
+    }
+    .btn-3 {
+      > div {
+        background: #007f5f;
+      }
+    } 
+    .btn-4 {
+      > div {
+        background: #007f5f;
+      }
+    }  
+  `}
+
+  ${props => props.monitor === '360x680' && css`
+    > label {
+      >div{ 
+        background: #003D2E;
+      }
+    }
+  `}
+
+
+  > div {
+    width: 80%;
+    background: white;
+    height: 10%;
+    position: absolute;
+    bottom: 5px;
+    left: 10%;
+    z-index: 1;
+    overflow: hidden;
+
+      ${props => props.monitor === '800x600' && css`
+        width: 0%;
+        background: #80b918;
+      `}
+
+      ${props => props.monitor === '1024x768' && css`
+        width: 20%;
+        background: #55a630;
+      `}
+
+      ${props => props.monitor === '1280x1024' && css`
+        width: 40%;
+        background: #2b9348;
+      `}
+
+      ${props => props.monitor === '1980x1080' && css`
+        width: 60%;
+        background: #007f5f;
+      `}
+
+      ${props => props.monitor === '360x680' && css`
+        width: 80%;
+        background: #003D2E;
+      `}
   }
 `

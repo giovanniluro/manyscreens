@@ -4,12 +4,12 @@ import { Container, Monitor, Content, Buttons, Screen, Button1, Button2, ScreenD
 
 const Main: React.FC = () => {
 
-  const [monitor, setMonitor] = useState('360x680');
+  const [monitor, setMonitor] = useState('800x600');
 
   return (
     <Container >
       <Content>
-        <h1>Popular screens on the web</h1>
+        <h1>Resoluções populares na web</h1>
         <Monitor monitor={monitor} />
         <Screen monitor={monitor}>
           <Size monitor={monitor}>
@@ -23,13 +23,29 @@ const Main: React.FC = () => {
         <Base monitor={monitor} />
       </Content>
 
-      <Buttons>
-        <button onClick={() => setMonitor('800x600')}>1997</button>
-        <button onClick={() => setMonitor('1024x768')}>2002</button>
-        <button onClick={() => setMonitor('1280x1024')}>2009</button>
-        <button onClick={() => setMonitor('1980x1080')}>2015</button>
-        <button onClick={() => setMonitor('360x680')}>...?</button>
-      </Buttons>
+      <Buttons monitor={monitor}>
+        <div></div>
+        <label className='btn-1'>
+          <button onClick={() => setMonitor('800x600')}>1997</button>
+          <div className={monitor === '800x600'?'selected':''}></div>
+        </label>
+        <label className='btn-2'>
+          <button  onClick={() => setMonitor('1024x768')}>2002</button>
+          <div className={monitor === '1024x768'?'selected':''}></div>
+        </label>
+        <label className='btn-3'>
+          <button onClick={() => setMonitor('1280x1024')}>2009</button>
+          <div className={monitor === '1280x1024'?'selected':''}></div>
+        </label>
+        <label className='btn-4'>
+          <button onClick={() => setMonitor('1980x1080')}>2015</button>
+          <div className={monitor === '1980x1080'?'selected':''}></div>
+        </label>
+        <label className='btn-5'>
+          <button onClick={() => setMonitor('360x680')}>... ?</button>
+          <div className={monitor === '360x680'?'selected':''}></div>
+        </label></
+      Buttons>
     </Container>
   )
 }
