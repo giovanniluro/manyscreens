@@ -74,6 +74,15 @@ export const Monitor = styled.div<MonitorProps>`
     left: 31%;
     border-radius: 6px;
   `}
+
+  ${props => props.monitor === 4 && css`
+    height: 60%;
+    width: 50%;
+    background: linear-gradient(200deg ,#1F1F1F, #302A29);
+    top: 16%;
+    left: 25%;
+    border-radius: 10px;
+  `}
 `
 export const Screen = styled.div<MonitorProps>`
   
@@ -105,6 +114,16 @@ export const Screen = styled.div<MonitorProps>`
     background: linear-gradient(200deg ,#0A0A0A, #141414);
     top: 20%;
     left: 33%;
+    z-index: 2;
+    border-radius: 14px;
+  `}
+
+  ${props => props.monitor === 4 && css`
+    height: 56%;
+    width: 48%;
+    background: linear-gradient(200deg ,#131513, #141414);
+    top: 18%;
+    left: 26%;
     z-index: 2;
     border-radius: 14px;
   `}
@@ -141,6 +160,14 @@ export const Button1 = styled.div<MonitorProps>`
     top: 67.5%;
     left: 66%;
   `}
+
+  ${props => props.monitor === 4 && css`
+    height: .4%;
+    width: 1.5%;
+    background: #fbfbfb;
+    top: 74.7%;
+    left: 70%;
+  `}
 `
 
 export const Button2 = styled.div<MonitorProps>`
@@ -171,6 +198,14 @@ export const Button2 = styled.div<MonitorProps>`
     background: #3A5A40;
     top: 67.5%;
     left: 64.5%;
+  `}
+
+  ${props => props.monitor === 4 && css`
+    height: .4%;
+    width: 1.5%;
+    background: #fbfbfb;
+    top: 74.7%;
+    left: 67%;
   `}
 `
 
@@ -210,6 +245,14 @@ export const ScreenDetail = styled.div<MonitorProps>`
     border-top: 2px solid #fbfbfb;
     border-right: 2px solid #fbfbfb;
   `}
+
+  ${props => props.monitor === 4 && css`
+    height: .4%;
+    width: 1.5%;
+    background: #fbfbfb;
+    top: 74.7%;
+    left: 64%;
+  `}
 `
 
 export const Foot = styled.div<MonitorProps>`
@@ -230,7 +273,11 @@ export const Foot = styled.div<MonitorProps>`
     background: #DCDAD0;
     top: 67%;
     left: 45%;
-    transform: perspective(60px) rotateX(45deg) scaleX(0.75);
+    transform: perspective(60px) rotateX(45deg) scaleX(0.7) scaleY(1.2);
+
+    @media(max-width: 450px) {
+      transform: perspective(60px) rotateX(45deg) scaleX(0.7) scaleY(1.4);
+    }
   `}
 
   ${props => props.monitor === 3 && css`
@@ -239,6 +286,14 @@ export const Foot = styled.div<MonitorProps>`
     background: #1F1F1F;
     top: 67%;
     left: 45%;
+  `}
+
+  ${props => props.monitor === 4 && css`
+    height: 6%;
+    width: 3%;
+    background: #1F1F1F;
+    top: 75%;
+    left: 48.5%;
   `}
 `
 
@@ -269,6 +324,14 @@ export const Base = styled.div<MonitorProps>`
     top: 77%;
     left: 40%;
   `}
+
+  ${props => props.monitor === 4 && css`
+    height: 2%;
+    width: 20%;
+    background: #1F1F1F;
+    top: 80%;
+    left: 40%;
+  `}
 `
 
 export const Buttons = styled.div`
@@ -283,5 +346,6 @@ export const Buttons = styled.div`
     border-radius: 8px;
     color: black;
     outline: 0;
+    cursor: pointer;
   }
 `

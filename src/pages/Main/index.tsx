@@ -4,7 +4,7 @@ import { Container, Monitor, Content, Buttons, Screen, Button1, Button2, ScreenD
 
 const Main: React.FC = () => {
 
-  const [monitor, setMonitor] = useState(3);
+  const [monitor, setMonitor] = useState(4);
 
   return (
     <Container >
