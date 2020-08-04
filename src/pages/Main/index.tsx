@@ -4,7 +4,7 @@ import { Container, Monitor, Content, Buttons, Screen, Button1, Button2, ScreenD
 
 const Main: React.FC = () => {
 
-  const [monitor, setMonitor] = useState(2);
+  const [monitor, setMonitor] = useState(3);
 
   return (
     <Container >
@@ -19,8 +19,10 @@ const Main: React.FC = () => {
       </Content>
 
       <Buttons>
-        <button onClick={() => setMonitor(1)}>1</button>
-        <button onClick={() => setMonitor(2)}>2</button>
+        <button onClick={() => setMonitor(1)}>1997</button>
+        <button onClick={() => setMonitor(2)}>2002</button>
+        <button onClick={() => setMonitor(3)}>2009</button>
+        <button onClick={() => setMonitor(4)}>2015</button>
       </Buttons>
     </Container>
   )
