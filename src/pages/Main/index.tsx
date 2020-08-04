@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Monitor, Content, Buttons, Screen, Button1, Button2, ScreenDetail, Foot, Base, Size } from './style';
-
+import { Container, Social, Monitor, Content, Buttons, Screen, Button1, Button2, ScreenDetail, Foot, Base, Size } from './style';
+import { FiLinkedin, FiGithub } from 'react-icons/fi';
 
 const Main: React.FC = () => {
 
@@ -9,7 +9,7 @@ const Main: React.FC = () => {
   return (
     <Container >
       <Content>
-        <h1>Resoluções populares na web</h1>
+        <h1>Resoluções populares na web</h1> 
         <Monitor monitor={monitor} />
         <Screen monitor={monitor}>
           <Size monitor={monitor}>
@@ -22,6 +22,11 @@ const Main: React.FC = () => {
         <Foot monitor={monitor} />
         <Base monitor={monitor} />
       </Content>
+
+      <Social>
+        <a href='https://linkedin.com/in/giovanniluro'><FiLinkedin /></a>
+        <a href='https://github.com/giovanniluro/manyscreens'><FiGithub /></a>
+      </Social>
 
       <Buttons monitor={monitor}>
         <div></div>

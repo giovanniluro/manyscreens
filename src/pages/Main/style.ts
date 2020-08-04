@@ -11,12 +11,12 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
     transition: .5s ease;
-    transform: translateZ(0);
   }
 
   html, body, #root {
     transition: none;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
 `
 
@@ -41,6 +41,10 @@ export const Content = styled.div`
   display: flex;
   justify-content: center;
 
+  div {
+    transform: translateZ(0);
+  }
+
   h1 {
     font-family: 'Roboto Condensed', sans-serif;
     margin-top: 10px;
@@ -55,6 +59,35 @@ export const Content = styled.div`
     width: 160vw;
     border-radius: 0;
   }
+`
+
+export const Social = styled.div`
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    color: #ddd;
+    padding: 15px;
+
+    svg {
+      height: 22px;
+      width: 22px;
+    }
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  @media(max-width: 500px) {
+    bottom: 0;  
+    justify-content: center;
+  }
+
 `
 
 export const Monitor = styled.div<MonitorProps>`
@@ -471,6 +504,7 @@ export const Buttons = styled.div<MonitorProps>`
     align-items: center;
     cursor: pointer;
     z-index: 2;
+    width: 25%;
 
     button {
       border: 0;
@@ -496,7 +530,7 @@ export const Buttons = styled.div<MonitorProps>`
   ${props => props.monitor === '800x600' && css`
     .btn-1 {
       > div {
-        background: #80b918;
+        background: #3c6e71;
       }
     }  
   `}
@@ -504,12 +538,12 @@ export const Buttons = styled.div<MonitorProps>`
   ${props => props.monitor === '1024x768' && css`
     .btn-1 {
       > div {
-        background: #55a630;
+        background: #3c6e71;
       }
     }  
     .btn-2 {
       > div {
-        background: #55a630;
+        background: #3c6e71;
       }
     }  
   `}
@@ -517,17 +551,17 @@ export const Buttons = styled.div<MonitorProps>`
   ${props => props.monitor === '1280x1024' && css`
     .btn-1 {
       > div {
-        background: #2b9348;
+        background: #3c6e71;
       }
     }  
     .btn-2 {
       > div {
-        background: #2b9348;
+        background: #3c6e71;
       }
     }
     .btn-3 {
       > div {
-        background: #2b9348;
+        background: #3c6e71;
       }
     }  
   `}
@@ -535,22 +569,22 @@ export const Buttons = styled.div<MonitorProps>`
   ${props => props.monitor === '1980x1080' && css`
     .btn-1 {
       > div {
-        background: #007f5f;
+        background: #3c6e71;
       }
     }  
     .btn-2 {
       > div {
-        background: #007f5f;
+        background: #3c6e71;
       }
     }
     .btn-3 {
       > div {
-        background: #007f5f;
+        background: #3c6e71;
       }
     } 
     .btn-4 {
       > div {
-        background: #007f5f;
+        background: #3c6e71;
       }
     }  
   `}
@@ -558,7 +592,7 @@ export const Buttons = styled.div<MonitorProps>`
   ${props => props.monitor === '360x680' && css`
     > label {
       >div{ 
-        background: #003D2E;
+        background: #3c6e71;
       }
     }
   `}
@@ -569,6 +603,7 @@ export const Buttons = styled.div<MonitorProps>`
     background: white;
     height: 10%;
     position: absolute;
+    background: #3c6e71;
     bottom: 5px;
     left: 10%;
     z-index: 1;
@@ -576,27 +611,22 @@ export const Buttons = styled.div<MonitorProps>`
 
       ${props => props.monitor === '800x600' && css`
         width: 0%;
-        background: #80b918;
       `}
 
       ${props => props.monitor === '1024x768' && css`
         width: 20%;
-        background: #55a630;
       `}
 
       ${props => props.monitor === '1280x1024' && css`
         width: 40%;
-        background: #2b9348;
       `}
 
       ${props => props.monitor === '1980x1080' && css`
         width: 60%;
-        background: #007f5f;
       `}
 
       ${props => props.monitor === '360x680' && css`
         width: 80%;
-        background: #003D2E;
       `}
   }
 `
