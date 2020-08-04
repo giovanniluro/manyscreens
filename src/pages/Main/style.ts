@@ -11,6 +11,7 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
     transition: .5s ease;
+    font-size: 14px;
   }
 
   html, body, #root {
@@ -33,8 +34,8 @@ export const Container = styled.div`
 export const Content = styled.div`
   margin-top: 40px;
   border: 6px solid #1d3557;
-  height: 40vw;
-  width: 80vw;
+  height: 33vw;
+  width: 66vw;
   position: relative;
   background: #4F759B;
   border-radius: 12px;
@@ -48,6 +49,7 @@ export const Content = styled.div`
   h1 {
     font-family: 'Roboto Condensed', sans-serif;
     margin-top: 10px;
+    font-size: 20px;
     
     @media(max-width: 600px) {
       font-size: 18px;
@@ -58,6 +60,12 @@ export const Content = styled.div`
     height: 80vw;
     width: 160vw;
     border-radius: 0;
+  }
+
+  @media(min-width: 950px) {
+    width: 850px;
+    height: 425px;
+
   }
 `
 
@@ -83,7 +91,7 @@ export const Social = styled.div`
     }
   }
 
-  @media(max-width: 500px) {
+  @media(max-width: 450px) {
     bottom: 0;  
     justify-content: center;
   }
