@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/manyscreens/static/js/main.90276b68.chunk.js",
-    "main.js.map": "/manyscreens/static/js/main.90276b68.chunk.js.map",
+    "main.js": "/manyscreens/static/js/main.ce62743d.chunk.js",
+    "main.js.map": "/manyscreens/static/js/main.ce62743d.chunk.js.map",
     "runtime-main.js": "/manyscreens/static/js/runtime-main.3939a767.js",
     "runtime-main.js.map": "/manyscreens/static/js/runtime-main.3939a767.js.map",
     "static/js/2.9a90d309.chunk.js": "/manyscreens/static/js/2.9a90d309.chunk.js",
     "static/js/2.9a90d309.chunk.js.map": "/manyscreens/static/js/2.9a90d309.chunk.js.map",
     "index.html": "/manyscreens/index.html",
-    "precache-manifest.72997fe9592c5356318db739e56e7e06.js": "/manyscreens/precache-manifest.72997fe9592c5356318db739e56e7e06.js",
+    "precache-manifest.85d92ea7d686ac7c3d917fa79a54dbac.js": "/manyscreens/precache-manifest.85d92ea7d686ac7c3d917fa79a54dbac.js",
     "service-worker.js": "/manyscreens/service-worker.js",
     "static/js/2.9a90d309.chunk.js.LICENSE.txt": "/manyscreens/static/js/2.9a90d309.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3939a767.js",
     "static/js/2.9a90d309.chunk.js",
-    "static/js/main.90276b68.chunk.js"
+    "static/js/main.ce62743d.chunk.js"
   ]
 }
