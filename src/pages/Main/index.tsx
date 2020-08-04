@@ -4,7 +4,7 @@ import { Container, Monitor, Content, Buttons, Screen, Button1, Button2, ScreenD
 
 const Main: React.FC = () => {
 
-  const [monitor, setMonitor] = useState('800x600');
+  const [monitor, setMonitor] = useState('360x680');
 
   return (
     <Container >
@@ -28,6 +28,7 @@ const Main: React.FC = () => {
         <button onClick={() => setMonitor('1024x768')}>2002</button>
         <button onClick={() => setMonitor('1280x1024')}>2009</button>
         <button onClick={() => setMonitor('1980x1080')}>2015</button>
+        <button onClick={() => setMonitor('360x680')}>...?</button>
       </Buttons>
     </Container>
   )

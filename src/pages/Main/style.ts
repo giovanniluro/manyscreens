@@ -15,6 +15,7 @@ export default createGlobalStyle`
 
   html, body, #root {
     transition: none;
+    overflow-x: hidden;
   }
 `
 
@@ -92,6 +93,15 @@ export const Monitor = styled.div<MonitorProps>`
     left: 25%;
     border-radius: 10px;
   `}
+
+  ${props => props.monitor === '360x680' && css`
+    height: 75%;
+    width: 22%;
+    background: linear-gradient(50deg ,#ccc, #fbfbfb);
+    top: 16%;
+    left: 39%;
+    border-radius: 8px;
+  `}
 `
 
 export const Screen = styled.div<MonitorProps>`
@@ -140,6 +150,15 @@ export const Screen = styled.div<MonitorProps>`
     z-index: 2;
     border-radius: 10px;
   `}
+
+  ${props => props.monitor === '360x680' && css`
+    height: 65%;
+    width: 20%;
+    background: #0a0a0a;
+    top: 18.5%;
+    left: 40%;
+    border-radius: 8px;
+  `}  
 `
 
 export const Button1 = styled.div<MonitorProps>`
@@ -181,6 +200,16 @@ export const Button1 = styled.div<MonitorProps>`
     top: 74.7%;
     left: 70%;
   `}
+
+  ${props => props.monitor === '360x680' && css`
+    height: 4%;
+    width: 2%;
+    background: #1f1f1f;
+    border-radius: 50%;
+    top: 84.5%;
+    left: 49%;
+    border: 3px solid black;
+  `}
 `
 
 export const Button2 = styled.div<MonitorProps>`
@@ -189,10 +218,10 @@ export const Button2 = styled.div<MonitorProps>`
   z-index: 2;
   
   ${props => props.monitor === '800x600' && css`
-    height: 3%;
+    height: 2%;
     width: 14%;
     background: #0A0A0A;
-    top: 68.5%;
+    top: 69%;
     left: 41.5%;
   `}
 
@@ -219,6 +248,16 @@ export const Button2 = styled.div<MonitorProps>`
     background: #fbfbfb;
     top: 74.7%;
     left: 67%;
+  `}
+
+  ${props => props.monitor === '360x680' && css`
+    height: .5%;
+    width: .25%;
+    background: #fbfbfb;
+    border-radius: 50%;
+    border: 2px solid black;
+    top: 16.5%;
+    left: 50%;
   `}
 `
 
@@ -266,6 +305,14 @@ export const ScreenDetail = styled.div<MonitorProps>`
     top: 74.7%;
     left: 64%;
   `}
+
+  ${props => props.monitor === '360x680' && css`
+    height: .4%;
+    width: 1.5%;
+    background: black;
+    top: 16.8%;
+    left: 51.5%;
+  `}
 `
 
 export const Foot = styled.div<MonitorProps>`
@@ -308,6 +355,13 @@ export const Foot = styled.div<MonitorProps>`
     top: 75%;
     left: 48.5%;
   `}
+
+  ${props => props.monitor === '360x680' && css`
+    height: 0%;
+    width: 0%;
+    top: 70%;
+    left: 50%;
+  `}
 `
 
 export const Base = styled.div<MonitorProps>`
@@ -344,6 +398,13 @@ export const Base = styled.div<MonitorProps>`
     background: #1F1F1F;
     top: 80%;
     left: 40%;
+  `}
+
+  ${props => props.monitor === '360x680' && css`
+    height: 0%;
+    width: 0%;
+    top: 80%;
+    left: 50%;
   `}
 `
 
@@ -386,16 +447,24 @@ export const Size = styled.div<MonitorProps>`
     background: transparent;
   `}
 
+  ${props => props.monitor === '360x680' && css`
+    border: 2px solid #2a9d8f;
+    color: #2a9d8f;
+    background: #323031;
+  `}
+
 `
 
 export const Buttons = styled.div`
-  display: flex; 
+  display:flex;
+  justify-content: space-around;
   margin-top: 40px;
+  width: 90vw;
 
   button {
-    margin: 0 20px;
     border: 0;
-    padding: 10px;
+    padding: 1px;
+    padding: 10px 20px;
     background: white;
     border-radius: 8px;
     color: black;
